@@ -38,11 +38,27 @@ class SongController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'title'          =>  'required',
-            'artist'          =>  'required',
-            'album'          =>  'required',
-            'length'          =>  'required',
+            'title'          =>  'required|min:3',
+            'artist'          =>  'required|min:3',
+            'album'          =>  'required|min:3',
+            'length'          =>  'required|integer',
             
+        ],[
+            // 'title.required' => 'Enter a name ',
+            // 'title.min' => 'The name cannot be less than :min characters ',
+
+            // 'artist.required' => 'Enter a artist ',
+            // 'artist.min' => 'The name cannot be less than :min characters ',
+
+            // 'album.required' => 'Enter a album ',
+            // 'album.min' => 'The name cannot be less than :min characters ',
+
+            // 'length.required' => 'Enter length ',
+            // 'length.interger' => 'The length must be numeric',
+
+            'require' => 'Required to enter',
+            'min' => 'cannot be less than :min characters',
+            'integer' => 'must be numeric'
         ]);
 
 
