@@ -19,6 +19,14 @@ class SongController extends Controller
         return view('index', compact('data'))->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
+    // public function trashed_songs()
+    // {
+    //     $data = Song::latest()->paginate(10);
+
+    //     return view('trash-list', compact('data'))->with('i', (request()->input('page', 1) - 1) * 5);
+       
+    // }
+
     /**
      * Show the form for creating a new resource.
      *

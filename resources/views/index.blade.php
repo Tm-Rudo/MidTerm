@@ -16,6 +16,7 @@
             <div class="col col-md-6"><b>Song Data</b></div>
             <div class="col col-md-6">
                 <a href="{{ route('songs.create') }}" class="btn btn-success btn-sm float-end">Add</a>
+
             </div>
         </div>
     </div>
